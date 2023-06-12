@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"> <br>
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome"><br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade"><br>
+            <input type="button" value="Salvar" onclick="fnAlteraValores()">
+        </form>
+    </div>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label,
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <script>
+        function fnAlteraValores() {
+            let nome = document.getElementById("nome").value;
+            let sobrenome = document.getElementById("sobrenome").value;
+            let idade = document.getElementById("idade").value;
+
+
+            console.log("Nome:", nome);
+            console.log("Sobrenome:", sobrenome);
+            console.log("Idade:", idade);
+
+
+            if (nome == "") {
+                alert("Preencha nome");
+                return;
+            }
+            if (sobrenome == "") {
+                alert("Preencha o sobrenome");
+                return;
+            }
+            if (idade == "") {
+                alert("preencha a idade ");
+                return;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
